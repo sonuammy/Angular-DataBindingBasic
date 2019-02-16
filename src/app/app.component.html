@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 style="text-align:center;">{{message}}</h1>
+    <!-- String Interpolation -->
+    <div>
+        <h4><u>String Interpolation</u></h4>
+        <p>{{'server'}} with ID {{ServerId}} is {{ServerStatus}} or {{ServerStatus1}}</p> 
+    </div>
+    <hr>
+    <!-- Property Binding -->
+    <div>
+        <h4><u>Property Binding</u></h4>
+        <button class="btn btn-primary" [disabled] = "!allowServer">Add Server</button>
+    </div>
+    <hr>
+    <!-- Event Binding -->
+    <div>
+        <h4><u>Event Binding</u></h4>
+        <button class="btn btn-warning" (click)='onCreateServer()'>Add Server</button>
+        <br>
+        <p>{{serverCreationStatus}}</p>
+    </div>
+    <hr>
+    <!-- Two-way Binding -->
+    <div>
+        <h4>Two-way Binding</h4>
+        <input type="text" class="form-control" [(ngModel)]="username" placeholder="Enter your name"><br>
+        {{username}}
+    </div>
+</div>
